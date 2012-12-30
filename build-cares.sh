@@ -29,7 +29,7 @@ set -e
 # Download source
 if [ ! -e "c-ares-${CARES_VERSION}.tar.gz" ]
 then
-  curl -O "http://c-ares.haxx.se/c-ares-${CARES_VERSION}.tar.gz"
+  curl -O "http://c-ares.haxx.se/download/c-ares-${CARES_VERSION}.tar.gz"
 fi
 
 # Extract source
@@ -42,7 +42,7 @@ export DEVROOT="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 export SDKROOT="${DEVROOT}/SDKs/${PLATFORM}${SDK}.sdk"
 export CC=${DEVROOT}/usr/bin/gcc
 export LD=${DEVROOT}/usr/bin/ld
-export CPP=${DEVROOT}/usr/bin/cpp
+#export CPP=${DEVROOT}/usr/bin/cpp
 export CXX=${DEVROOT}/usr/bin/g++
 unset AR
 unset AS
@@ -50,7 +50,7 @@ export AR=${DEVROOT}/usr/bin/ar
 export AS=${DEVROOT}/usr/bin/as
 export NM=${DEVROOT}/usr/bin/nm
 export STRIP="${DEVROOT}/usr/bin/strip"
-export CXXCPP=$DEVROOT/usr/bin/cpp
+#export CXXCPP=$DEVROOT/usr/bin/cpp
 export RANLIB=$DEVROOT/usr/bin/ranlib
 export LDFLAGS="-arch ${ARCH} -pipe -no-cpp-precomp -isysroot ${SDKROOT} -L${ROOTDIR}/lib"
 export CFLAGS="-arch ${ARCH} -pipe -no-cpp-precomp -isysroot ${SDKROOT} -I${ROOTDIR}/include"

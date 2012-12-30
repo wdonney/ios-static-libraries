@@ -44,13 +44,13 @@ export DEVROOT="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 export SDKROOT="${DEVROOT}/SDKs/${PLATFORM}${SDK}.sdk"
 export CC=${DEVROOT}/usr/bin/gcc
 export LD=${DEVROOT}/usr/bin/ld
-export CPP=${DEVROOT}/usr/bin/cpp
+#export CPP=${DEVROOT}/usr/bin/cpp
 export CXX=${DEVROOT}/usr/bin/g++
 unset AR
 export AR=${DEVROOT}/usr/bin/ar
 unset AS
 export NM=${DEVROOT}/usr/bin/nm
-export CXXCPP=${DEVROOT}/usr/bin/cpp
+#export CXXCPP=${DEVROOT}/usr/bin/cpp
 export RANLIB=${DEVROOT}/usr/bin/ranlib
 export LDFLAGS="-Wall -Winline -O2 -g -D_FILE_OFFSET_BITS=64 -arch ${ARCH} -pipe -no-cpp-precomp -isysroot ${SDKROOT} -L${ROOTDIR}/lib"
 export CFLAGS="-Wall -Winline -O2 -g -D_FILE_OFFSET_BITS=64 -arch ${ARCH} -pipe -no-cpp-precomp -isysroot ${SDKROOT} -I${ROOTDIR}/include -g ${BIGFILES}"

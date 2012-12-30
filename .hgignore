@@ -2,8 +2,11 @@ syntax: glob
 
 .DS_Store
 
+bzip2-*
+c-ares-*
 curl-*
 cyrus-sasl-*
+expat-*
 gnupg-*
 libetpan-*
 libgcrypt-*
